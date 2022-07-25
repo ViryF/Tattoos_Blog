@@ -5,7 +5,7 @@ const Post = new Schema(
   {
     nickname: { type: String, required: true }, 
     description: { type: String, required: true},
-    imageURL: { type: String, required: true }
+    url: { type: String, required: true }
   },
   { timestamps: true }
 )

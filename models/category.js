@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Category = new Schema(
   {
     description: { type: String, required: true},
-    imageURL: { type: String, required: true }
+    url: { type: String, required: true }
   },
   { timestamps: true }
 )
