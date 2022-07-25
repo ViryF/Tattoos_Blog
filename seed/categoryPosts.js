@@ -8,37 +8,37 @@ const main = async () => {
     description: 'Animals',
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdNpxKYWwTznpRyrK-_JWE-O7-PUQY6Mf_pw&usqp=CAU'
   })
-  post1.save()
+  category1.save()
 
   const category2 = await new Category({
     description: 'Languages',
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2R6J5U0Hj75X4RSr2N1YLP84b6JE5kUvnlA&usqp=CAU'
   })
-  post2.save()
+  category2.save()
 
   const category3 = await new Category({
     description: 'Mandala',
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUkgJGAr3-iDDSloFKc3t-CC374YWdmIY0nNBr0z3P4Fg8BAWiQejnVQ5TMovAmnEFbpY&usqp=CAU'
   })
-  post3.save()
+  category3.save()
 
   const category4 = await new Category({
     description: 'Tribal',
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAkrat7N700W-w1cZE_Ar1sw4Y5xU7RLA6rg&usqp=CAU'
   })
-  post4.save()
+  category4.save()
 
   const category5 = await new Category({
     description: 'Botanical',
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsKGijUsrWSTHBbg1_SZ8QpIPrNc-x02u8uA&usqp=CAU'
   })
-  post5.save()
+  category5.save()
 
   const category6 = await new Category({
     description: 'Realism',
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREhazZ4-Z5yhf5DGma9pS7FbSmO2fyK5C6_Q&usqp=CAU'
   })
-  post5.save()
+  category6.save()
 
   const posts = [
     {
@@ -55,7 +55,7 @@ const main = async () => {
     },
     {
       nickname: 'Cecilia',
-      description: '',
+      description: 'My spirit animal',
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF-1cCrChxO04E8WB74JPmMdKB4LEPhRJiGw&usqp=CAU',
       category: category1._id
     },
@@ -165,7 +165,7 @@ const main = async () => {
     },
   ]
 
-  await Posts.insertMany(posts)
+  await Post.insertMany(posts)
   console.log('Created posts!')
 }
 

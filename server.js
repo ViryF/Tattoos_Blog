@@ -12,6 +12,8 @@ app.use(express.json())
 app.use(logger('dev'))
 app.use(express.urlencoded({ extended: false }))
 
+// const { index } = require('./models')
+
 app.use('/api', routes)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
