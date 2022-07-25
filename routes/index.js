@@ -8,7 +8,7 @@ router.get('/categories', controllers.getAllCategories)
 
 router.get('/categories/:id', controllers.getCategoryById)
 
-router.post('/posts', controllers.createPost)
+router.get('/posts', controllers.createPost)
 
 router.put('/posts/:id', controllers.updatePost)
 router.delete('/posts/:id', controllers.deletePost)

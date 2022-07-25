@@ -12,9 +12,28 @@ app.use(express.json())
 app.use(logger('dev'))
 app.use(express.urlencoded({ extended: false }))
 
-// const { index } = require('./models')
-
 app.use('/api', routes)
+
+const { Category, Post } = require('./models')
+
+
+app.get('/categories', async (req, res) => {
+  const categories = await Category.find({})
+  res.json(categories)
+})
+
+app.get('/categories/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const categories = await Category.findById(id)
+    if(!categories) throw Error('Category not found!')
+    res.json(categories)
+  } catch (e) {
+    console.log(e)
+    res.send('Category not found!')
+  }
+})
+
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
