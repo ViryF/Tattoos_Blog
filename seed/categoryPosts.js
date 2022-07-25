@@ -82,21 +82,21 @@ const main = async () => {
 
     {
       nickname: 'Jess',
-      description: '',
+      description: 'My works so far',
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_d4wAvP477Iji-xDPtFZIWM3h-1Hi9htvSdHCnNZqef17kmwLxVd1ZHFfn-7zKTKI8PY&usqp=CAU',
       category: category3._id
     },
 
     {
       nickname: 'Lena',
-      description: '',
+      description: 'This is one of my favorites!',
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPqb-oCzuL-uWIRfj_UK2X4tdvctnVw61ONw&usqp=CAU',
       category: category3._id
     },
 
     {
       nickname: 'Billie',
-      description: '',
+      description: 'Love the quality and amount of detail in this one!',
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_nuXIzFP4FB0GPfDL-EduBBdFNoTcyqqHrXI1z_7b-MkLT5KVI7ILkyoQu0oP2w08r1E&usqp=CAU',
       category: category3._id
     },
@@ -131,14 +131,14 @@ const main = async () => {
 
     {
       nickname: 'Jen',
-      description: '',
+      description: 'You can never have enough plants',
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRiXc-6ZHgX0fMcTsxOabQmEVRmRVnjjwGfg&usqp=CAU',
       category: category5._id
     },
 
     {
       nickname: 'Jacob',
-      description: '',
+      description: 'Working on my sleve',
       url: 'https://mymodernmet.com/wp/wp-content/uploads/archive/T-ZHuhqPjmkD4TfCUTqa_alicecarrier1.jpg',
       category: category5._id
     },
