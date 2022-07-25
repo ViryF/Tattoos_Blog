@@ -1,7 +1,7 @@
 # Tattoos Blog
 # Date: 07/24/2022
 ## By: Viridiana Flores
-## [GitHub](https://github.com/ViryF) | [LinkedIn](htps://www.linkedin.com/in/viridiana-flores-estrada-8509a6133)
+## [GitHub](https://github.com/ViryF) | [LinkedIn](https://www.linkedin.com/in/viridianaflores)
 ***
 ## ***Description***
 ## This is a blog about tattoos. Anyone can view and create posts about tattoss that they like. The benefit of signing up for an account is that the user is able to follow people and posts from other people. Also, they are able to edit or delete their own posts. Whereas, if the user chooses to create or view posts with the anonymous option, they will not be able to edit or delete any of their previously submitted posts, and they will not be able to follow other users.  
@@ -26,6 +26,7 @@
 - [x] ~~Strikethrough~~ Items Also
 ***
 ## ***Credits***
+### Drawio planning: [Drawio](https://app.diagrams.net/#G1HqBklZtCe_kpwsLqxldE1KGB0gkDRmSF)
 ### Funny Images: [DuckDuckGo Search](URLHERE)
 ### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide) 
 ### Markdown Cheatsheet: [GitHub](https://github.com/ViryF/u1_hw_markdown)
