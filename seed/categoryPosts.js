@@ -42,125 +42,125 @@ const main = async () => {
 
   const posts = [
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Daenerys',
+      description: 'Mother of Dragons',
+      url: 'https://media1.popsugar-assets.com/files/thumbor/QJA6nF-NZAnGwvTSA4RxxXO5las/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2016/09/30/682/n/1922153/55fa966ff77378bc_04/i/Daenerys-Targaryen.jpg',
       category: category1._id
     },
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Jon',
+      description: 'The White Wolf',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAn_DH2qhobIYsOm_Yx9DAfkFfGYfP82b3OA&usqp=CAU',
       category: category1._id
     },
     {
-      nickname: '',
+      nickname: 'Cecilia',
       description: '',
-      url: '',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF-1cCrChxO04E8WB74JPmMdKB4LEPhRJiGw&usqp=CAU',
       category: category1._id
     },
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Tyrion',
+      description: 'Once you have accepted your flaws, no one can use them against you.',
+      url: 'https://th.bing.com/th/id/OIP.Fk_fsOd7LbmqbAly8BLv4gHaFj?w=283&h=212&c=7&r=0&o=5&dpr=2.5&pid=1.7',
       category: category2._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Hodor',
+      description: 'Hold the Door',
+      url: 'https://th.bing.com/th/id/OIP.eTC43FukDY7bSOLN4Hb7ZQHaHa?w=180&h=180&c=7&r=0&o=5&dpr=2.5&pid=1.7',
       category: category2._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Sansa',
+      description: 'The North Remembers',
+      url: 'https://tattoozz1.gumlet.io/wp-content/uploads/2022/05/game-of-thrones-tattoo-1.jpg?compress=true&quality=80&w=1024&dpr=2.5',
       category: category2._id
     },
 
     {
-      nickname: '',
+      nickname: 'Jess',
       description: '',
-      url: '',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_d4wAvP477Iji-xDPtFZIWM3h-1Hi9htvSdHCnNZqef17kmwLxVd1ZHFfn-7zKTKI8PY&usqp=CAU',
       category: category3._id
     },
 
     {
-      nickname: '',
+      nickname: 'Lena',
       description: '',
-      url: '',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPqb-oCzuL-uWIRfj_UK2X4tdvctnVw61ONw&usqp=CAU',
       category: category3._id
     },
 
     {
-      nickname: '',
+      nickname: 'Billie',
       description: '',
-      url: '',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_nuXIzFP4FB0GPfDL-EduBBdFNoTcyqqHrXI1z_7b-MkLT5KVI7ILkyoQu0oP2w08r1E&usqp=CAU',
       category: category3._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Bran',
+      description: 'Failure is a necessary ingredient for success.',
+      url: 'https://tattoozz1.gumlet.io/wp-content/uploads/2022/05/game-of-thrones-dragons-tattoo-mother-of-dragons-1.jpg?compress=true&quality=80&w=1024&dpr=2.5',
       category: category4._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Khal',
+      description: 'If this is a dream, I will kill the man who tries to wake me.',
+      url: 'https://tattoozz1.gumlet.io/wp-content/uploads/2022/05/game-of-thrones-tattoo-darwing-arm.jpg?compress=true&quality=80&w=900&dpr=2.5',
       category: category4._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Brienne',
+      description: 'Honor & Valor',
+      url: 'https://th.bing.com/th/id/OIP.mvHx_PNIh0uX1yKLRQtA0gHaHa?w=202&h=202&c=7&r=0&o=5&dpr=2.5&pid=1.7',
       category: category4._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Cersei',
+      description: 'Pretty to look at.',
+      url: 'https://i.dailymail.co.uk/i/pix/2014/08/26/1409041450051_Image_galleryImage_LOS_ANGELES_CA_AUGUST_25_.JPG',
       category: category5._id
     },
 
     {
-      nickname: '',
+      nickname: 'Jen',
       description: '',
-      url: '',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRiXc-6ZHgX0fMcTsxOabQmEVRmRVnjjwGfg&usqp=CAU',
       category: category5._id
     },
 
     {
-      nickname: '',
+      nickname: 'Jacob',
       description: '',
-      url: '',
+      url: 'https://mymodernmet.com/wp/wp-content/uploads/archive/T-ZHuhqPjmkD4TfCUTqa_alicecarrier1.jpg',
       category: category5._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Catelyn',
+      description: 'Justice for my family',
+      url: 'https://tattoozz1.gumlet.io/wp-content/uploads/2022/05/pete-davidson-game-of-thrones-tattoo.jpg?compress=true&quality=80&w=1024&dpr=2.5',
       category: category6._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Robb',
+      description: 'I see it coming...',
+      url: 'https://tattoozz1.gumlet.io/wp-content/uploads/2022/05/game-of-thrones-breaking-bad-tattoo.jpg?compress=true&quality=80&w=1024&dpr=2.5',
       category: category6._id
     },
 
     {
-      nickname: '',
-      description: '',
-      url: '',
+      nickname: 'Arya',
+      description: 'My final achievement!',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKrXuddWqPpC8H82EudLYbrv-Z5-YvzHAxg&usqp=CAU',
       category: category6._id
     },
   ]
