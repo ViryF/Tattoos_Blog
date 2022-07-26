@@ -18,33 +18,14 @@ app.use(express.urlencoded({ extended: false }))
 // app.use('/api', routes)
 
 app.get('/categories', categoryController.getAllCategories)
-app.post('/categories/:id', postController.createPost)
 app.get('/categories/:id/posts', postController.getPostsByCat)
 app.get('/categories/:id', categoryController.getCategoryById)
-app.put('/categories/:id', postController.updatePost)
-app.delete('/categories/:id', postController.deletePost)
 
+app.post('/categories/:id', postController.createPost)
 
+app.put('/categories/:id/posts/:id', postController.updatePost)
 
-
-// async (req, res) => {
-//   const categories = await Category.find({})
-//   res.json(categories)
-// })
-
-// app.get('/categories/:id', async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const categories = await Category.findById(id)
-//     if(!categories) throw Error('Category not found!')
-//     res.json(categories)
-//   } catch (e) {
-//     console.log(e)
-//     res.send('Category not found!')
-//   }
-// })
-
-
+app.delete('/categories/:id/posts/:id', postController.deletePost)
 
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))

@@ -34,16 +34,6 @@ const deletePost = async (req, res) => {
   }
 }
 
-// const getAllPosts = async (req, res) => {
-//   // try {
-//     const category = await Category.findById(req.params.id)
-//     console.log(category)
-//     return res.status(200).json(category)
-  // } catch (e) {
-  //   return res.status(500).send(error.message)
-  // }
-// }
-
 const getPostsByCat = async (req,res) => {
   try {
     const posts = await Post.find({category: req.params.id})
