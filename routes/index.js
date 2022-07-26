@@ -1,18 +1,17 @@
-const { Router } = require('express')
-const controllers = require('../controllers')
-const router = Router()
+// const { Router } = require('express')
+// const controllers = require('../controllers')
+// const router = Router()
 
-router.get('/', (req, res) => res.send('You got this!'))
+// router.get('/', (req, res) => res.send('You got this!'))
 
-router.get('/categories', controllers.getAllCategories)
+// router.get('/categories', controllers.getAllCategories)
 
-router.get('/categories/:id', controllers.getCategoryById)
+// router.get('/categories/:id', controllers.getCategoryById)
 
-router.get('/posts', controllers.createPost)
+// // router.get('/posts', controllers.getAllPosts)
+// router.get('/posts', controllers.createPost)
 
-router.put('/posts/:id', controllers.updatePost)
-router.delete('/posts/:id', controllers.deletePost)
+// router.put('/posts/:id', controllers.updatePost)
+// router.delete('/posts/:id', controllers.deletePost)
 
-// router.post('/account', controllers.createAccount)
-
-module.exports = router
+// module.exports = router
