@@ -1,25 +1,25 @@
 import { useNavigate } from 'react-router-dom'
 
 
-const Parks = (props) => {
+const Categories = (props) => {
   let navigate = useNavigate()
 
-  const showPark = (park) => {
-    navigate(`${park._id}`)                   
+  const showCategories = (category) => {
+    navigate(`${category._id}`)                   
   }
 
 
 return (
-    <div className="park-grid">
+    <div className="category-grid">
       {
-        props.parks?.map((park) =>(
-          <div className="park-card" onClick={() => showPark(park)} key={park.id}>
-            <img style={{display : 'block'}} src={park.image} alt={park.name} />
-            <h3>{park.name}</h3>
+        props.categories?.map((category) =>(
+          <div className="category-card" onClick={() => showCategories(category)} key={category.id}>
+            <img style={{display : 'block'}} src={category.url} alt={category.description} />
+            <h3>{category.posts}</h3>
             </div>
         ))}
     </div>
   )
 }
 
-export default Parks
+export default Categories
