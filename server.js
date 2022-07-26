@@ -18,9 +18,11 @@ app.use(express.urlencoded({ extended: false }))
 // app.use('/api', routes)
 
 app.get('/categories', categoryController.getAllCategories)
+app.post('/categories/:id', postController.createPost)
+app.get('/categories/:id/posts', postController.getPostsByCat)
 app.get('/categories/:id', categoryController.getCategoryById)
-app.get('/createposts', postController.createPost)
-app.get('categories/:id/posts', postController.getAllPosts)
+app.put('/categories/:id', postController.updatePost)
+app.delete('/categories/:id', postController.deletePost)
 
 
 

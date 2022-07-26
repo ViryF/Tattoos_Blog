@@ -1,12 +1,10 @@
-const { Post } = require('../models')
+const { Post, Category } = require('../models')
 
 const createPost = async (req, res) => {
   try {
-    const post = await new Posts(req.body)
+    const post = await new Post(req.body)
     await post.save()
-    return res.status(201).json({
-      ride
-    })
+    return res.status(201).json({ post })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
@@ -17,7 +15,7 @@ const updatePost = async (req, res) => {
     const post = await Post.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     })
-    res.status(200).json(ride)
+    res.status(200).json(post)
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -36,19 +34,31 @@ const deletePost = async (req, res) => {
   }
 }
 
-const getAllPosts = async (req, res) => {
+// const getAllPosts = async (req, res) => {
+//   // try {
+//     const category = await Category.findById(req.params.id)
+//     console.log(category)
+//     return res.status(200).json(category)
+  // } catch (e) {
+  //   return res.status(500).send(error.message)
+  // }
+// }
+
+const getPostsByCat = async (req,res) => {
   try {
-    const { id } = req.params
-    const posts = await Post.findById(id)
+    const posts = await Post.find({category: req.params.id})
     return res.status(200).json(posts)
   } catch (e) {
-    return res.status(500).send(error.message)
+    return res.status(500).send(e.message)
   }
 }
+
+
 
 module.exports = {
   createPost,
   updatePost,
   deletePost,
-  getAllPosts
+  // getAllPosts,
+  getPostsByCat
 }
