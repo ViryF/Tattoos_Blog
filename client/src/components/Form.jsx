@@ -7,6 +7,10 @@ const BASE_URL = 'http://localhost:3001'
 const Form = (props) => {
   let navigate = useNavigate()
 
+  // const showForm = (category) => {
+  //   navigate(`${category._id}/posts`)                   
+  // }
+
   const initialState = {
     nickname: '',
     description: '',
