@@ -12,6 +12,7 @@ const Home = () => {
     <div>
       <h1>Welcome! Go ahead an explore my Tattoo Blog</h1>
       <h2>Here you can view other people's posts, or you can make your own.</h2> 
+      <h2>Go ahead and click on <em>Categories</em> to get a group of different tattoo posts! </h2>
     </div>
     </div>
     
