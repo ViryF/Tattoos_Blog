@@ -5,36 +5,37 @@ import axios from 'axios'
 
 const BASE_URL = 'http://localhost:3001'
 
-const Form = (props) => {
+const EditPost = (props) => {
 
-  let { id } = useParams()
+  let { catId, postId, index } = useParams()
 
   let navigate = useNavigate()
 
   const initialState = {
-    nickname: '',
-    description: '',
-    url: '',
-    category: id
+    nickname: props.posts[index].nickname,
+    description: props.posts[index].description,
+    url: props.posts[index].url,
+    category: catId
   }
   
-  const [postValues, setPostValues] = useState(initialState)
+  const [formState, setFormState] = useState(initialState)
 
   const handleChange = event => {
-    setPostValues({...postValues, [event.target.id]: event.target.value })
+    setFormState({...formState, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await axios.post(`${BASE_URL}/categories`, postValues)
-    navigate(`/categories/${id}/posts`)
+    let res = await axios.put(`${BASE_URL}/categories/${catId}/posts/${postId}`, formState)
+    setFormState(initialState)
+    navigate(`/categories/${catId}/posts`)
   }
 
 
 
   return (
     <div>
-      <h1>Create your own post now!</h1>
+      <h1>Edit your own post now! {props.posts[index].nickname}</h1>
       <h4>Please enter your info below...</h4>
       <form onSubmit={handleSubmit}>
 
@@ -43,7 +44,7 @@ const Form = (props) => {
           id='nickname'
           type="text"
           placeholder="Choose Your Nickname"
-          value={postValues.nickname}
+          value={formState.nickname}
           onChange={handleChange}
         />
 
@@ -52,7 +53,7 @@ const Form = (props) => {
           id='description'
           placeholder="Enter a comment about your post"
           cols="30" rows="10"           
-          value={postValues.description}
+          value={formState.description}
           onChange={handleChange}
           ></textarea>
 
@@ -61,21 +62,21 @@ const Form = (props) => {
           id='url'
           type="text"
           placeholder="enter your image's URL here"
-          value={postValues.url}
+          value={formState.url}
           onChange={handleChange}
         />
 
         <button type="submit">Submit</button>
       </form>
-      <h1>Post:</h1>
+      <h1>Update Post to:</h1>
         <div>
-          <h3>Nickname: { postValues.nickname }</h3>
-          <p>Description: { postValues.description }</p>
-          <image src={postValues.url} alt='user image' />
+          <h3>Nickname: { formState.nickname }</h3>
+          <p>Description: { formState.description }</p>
+          <image src={formState.url} alt='user image' />
           
         </div>
       <div></div>
     </div>
   )
 }
-export default Form
+export default EditPost
