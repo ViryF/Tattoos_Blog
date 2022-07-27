@@ -1,3 +1,5 @@
+// import { useParams } from "react-router-dom"; 
+import Form from './components/Form';
 import Posts from './components/Posts';
 import Categories from './components/Categories'
 import Nav from './components/Nav'
@@ -11,6 +13,14 @@ const BASE_URL = 'http://localhost:3001'
 
 function App() {
 
+  // const initialState = {
+  //   nickname: '',
+  //   description: '',
+  //   url: '',
+  //   category: ''
+  // }
+  
+  // const [postValues, setPostValues] = useState(initialState)
   const [categories, setCategories] = useState([])
   const [posts, setPosts] = useState([])
 
@@ -23,6 +33,20 @@ function App() {
     getCategories()
   }, [])
 
+  
+
+  // const handleChange = event => {
+  //   setPostValues({...postValues, [event.target.id]: event.target.value })
+  // }
+
+  // let { id } = useParams()
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   let res = await axios.post(`${BASE_URL}/categories/${id}`, postValues)
+  //   setPostValues(initialState)
+  // }
+
 
   return (
     <div className="App">
@@ -34,6 +58,7 @@ function App() {
           <Route path="/" element={ <Home /> } />
           <Route path="/categories" element={ <Categories categories={categories} /> } />
           <Route path="/categories/:id/posts" element={ <Posts posts={posts} /> } />
+          <Route path="/categories/:id/form" element={ <Form /> } />
         </Routes>
       </main>
     </div>
@@ -41,3 +66,5 @@ function App() {
 }
 
 export default App;
+
+{/* <Route path="/categories/:id/form" element={ <Form  /> } /> */}

@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
@@ -5,32 +6,29 @@ import axios from 'axios'
 const BASE_URL = 'http://localhost:3001'
 
 const Form = (props) => {
-  let navigate = useNavigate()
 
-  // const showForm = (category) => {
-  //   navigate(`${category._id}/posts`)                   
-  // }
+  let { id } = useParams()
+
+  let navigate = useNavigate()
+  // navigate(`categories/${id}/posts`)
 
   const initialState = {
     nickname: '',
     description: '',
     url: '',
-    category: ''
+    category: id
   }
   
   const [postValues, setPostValues] = useState(initialState)
-
 
   const handleChange = event => {
     setPostValues({...postValues, [event.target.id]: event.target.value })
   }
 
-  let { id } = useParams()
-
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await axios.post(`${BASE_URL}/categories/${id}`, postValues)
-    setPostValues(initialState)
+    let res = await axios.post(`${BASE_URL}/categories`, postValues)
+    navigate(`/categories/${id}/posts`)
   }
 
 
@@ -40,15 +38,6 @@ const Form = (props) => {
       <h1>Sign Up with us today!</h1>
       <h4>Please enter your info below...</h4>
       <form onSubmit={handleSubmit}>
-      <label htmlFor='category'>Please choose the category for your post.</label>
-        <select id='category' onChange={handleChange} >
-          <option value="Languages">Languages</option>
-          <option value="Mandala">Mandala</option>
-          <option value="Tribal">Tribal</option>
-          <option value="Botanical">Botanical</option>
-          <option value="Animals">Animals</option>
-          <option value="Realism">Realism</option>
-        </select>
 
         <label htmlFor='nickname'>Nickname:</label>
         <input
@@ -63,7 +52,10 @@ const Form = (props) => {
         <textarea
           id='description'
           placeholder="Enter a comment about your post"
-          cols="30" rows="10"></textarea>
+          cols="30" rows="10"           
+          value={postValues.description}
+          onChange={handleChange}
+          ></textarea>
 
         <label htmlFor='url'>Image Link</label>
         <input
@@ -77,15 +69,12 @@ const Form = (props) => {
         <button type="submit">Submit</button>
       </form>
       <h1>Post:</h1>
-      { posts.map((post) => (
-        <div key={ post._id }>
-          <h3>Nickname: { post.nickname }</h3>
-          <h3>Category: { post.category }</h3>
-          <p>Description: { post.description }</p>
-          <p>URL: { post.url }</p>
+        <div>
+          <h3>Nickname: { postValues.nickname }</h3>
+          <p>Description: { postValues.description }</p>
+          <image src={postValues.url} alt='user image' />
           
         </div>
-      ))}
       <div></div>
     </div>
   )

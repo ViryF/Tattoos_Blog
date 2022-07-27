@@ -21,7 +21,7 @@ app.get('/categories', categoryController.getAllCategories)
 app.get('/categories/:id/posts', postController.getPostsByCat)
 app.get('/categories/:id', categoryController.getCategoryById)
 
-app.post('/categories/:id', postController.createPost)
+app.post('/categories', postController.createPost)
 
 app.put('/categories/:id/posts/:id', postController.updatePost)
 
