@@ -7,19 +7,22 @@ const BASE_URL = 'http://localhost:3001'
 
 const Posts = (props) => {
 
-  // const [posts, setPosts] = useState([])
-
   let { id } = useParams()
 
-  useEffect(() => {
+  
   const getCategoryById = async () => {
     let posts = await axios.get(`${BASE_URL}/categories/${id}/posts`)
     props.setPosts(posts.data)
     console.log(posts.data)
   }
+    useEffect(() => {
     getCategoryById()
   }, [])
 
+  const deletePost = async (id) => {
+    let post = await axios.delete(`${BASE_URL}/categories/${id}/posts/${id}`)
+    getCategoryById()    
+  }
   return (
     <div className="category-grid">
       <Link to={`/categories/${id}/form`} > <button>Add Post</button> </Link>
@@ -30,6 +33,7 @@ const Posts = (props) => {
             <h3>{post.description}</h3>
             <img style={{display : 'block'}} src={post.url} alt='' />
             <Link to={`/categories/${id}/posts/${post._id}/${index}`}> <button>Edit Post</button> </Link>
+            <button onClick={()=>deletePost(post._id)}>Delete Post</button>
             </div>
         ))}
     </div>
