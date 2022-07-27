@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 const BASE_URL = 'http://localhost:3001'
 
-const Posts = (props) => {
+const Posts = () => {
 
   const [posts, setPosts] = useState([])
 
