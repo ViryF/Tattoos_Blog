@@ -14,6 +14,7 @@ function App() {
   const [categories, setCategories] = useState([])
   const [posts, setPosts] = useState([])
 
+
   useEffect(() => {
     const getCategories = async () => {
       const category = await axios.get(`${BASE_URL}/categories`)

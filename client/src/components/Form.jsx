@@ -2,66 +2,86 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 
+const BASE_URL = 'http://localhost:3001'
+
 const Form = (props) => {
   let navigate = useNavigate()
 
-  const [formValues, setFormValues] = useState({
-    name: '',
-    rating: '',
-    email: ''
-  })
+  const initialState = {
+    nickname: '',
+    description: '',
+    url: '',
+    category: ''
+  }
+  
+  const [postValues, setPostValues] = useState(initialState)
 
-  const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+
+  const handleChange = event => {
+    setPostValues({...postValues, [event.target.id]: event.target.value })
   }
 
-  const handleSubmit = (e) => {
+  let { id } = useParams()
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('submit')
-    axios.post('http://localhost:3001/api/account', formValues)
-    navigate('/thanks')
+    let res = await axios.post(`${BASE_URL}/categories/${id}`, postValues)
+    setPostValues(initialState)
   }
 
-  const newAccount = props.newAccount
+
 
   return (
     <div>
       <h1>Sign Up with us today!</h1>
       <h4>Please enter your info below...</h4>
       <form onSubmit={handleSubmit}>
+      <label htmlFor='category'>Please choose the category for your post.</label>
+        <select id='category' onChange={handleChange} >
+          <option value="Languages">Languages</option>
+          <option value="Mandala">Mandala</option>
+          <option value="Tribal">Tribal</option>
+          <option value="Botanical">Botanical</option>
+          <option value="Animals">Animals</option>
+          <option value="Realism">Realism</option>
+        </select>
+
+        <label htmlFor='nickname'>Nickname:</label>
         <input
+          id='nickname'
           type="text"
-          name="name"
-          placeholder="YourName"
-          value={formValues.name}
+          placeholder="Choose Your Nickname"
+          value={postValues.nickname}
           onChange={handleChange}
         />
-        <br></br>
-        <br></br>
+
+        <label htmlFor="description">Description</label>
+        <textarea
+          id='description'
+          placeholder="Enter a comment about your post"
+          cols="30" rows="10"></textarea>
+
+        <label htmlFor='url'>Image Link</label>
         <input
+          id='url'
           type="text"
-          name="email"
-          placeholder="Your Email"
-          value={formValues.email}
+          placeholder="enter your image's URL here"
+          value={postValues.url}
           onChange={handleChange}
         />
-        <br></br>
-        <br></br>
-        <input
-          type="text"
-          name="rating"
-          placeholder="Your Rating, -5 of 5"
-          value={formValues.rating}
-          onChange={handleChange}
-        />
-        <br></br>
-        <button
-          type="submit"
-          // disabled={!props.name || !props.email || !props.rating}
-        >
-          Submit
-        </button>
+
+        <button type="submit">Submit</button>
       </form>
+      <h1>Post:</h1>
+      { posts.map((post) => (
+        <div key={ post._id }>
+          <h3>Nickname: { post.nickname }</h3>
+          <h3>Category: { post.category }</h3>
+          <p>Description: { post.description }</p>
+          <p>URL: { post.url }</p>
+          
+        </div>
+      ))}
       <div></div>
     </div>
   )
