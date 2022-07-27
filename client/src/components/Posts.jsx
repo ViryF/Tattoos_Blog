@@ -24,8 +24,9 @@ const Posts = () => {
       {
         posts?.map((post) =>(
           <div className="post-card"  key={post.id}>
-            <img style={{display : 'block'}} src={post.url} alt={post.description} />
-            <h3>{post.nickname}</h3>
+            <h2>{post.nickname}</h2>
+            <h3>{post.description}</h3>
+            <img style={{display : 'block'}} src={post.url} />
             </div>
         ))}
     </div>

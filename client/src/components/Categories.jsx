@@ -14,7 +14,8 @@ return (
       {
         props.categories?.map((category) =>(
           <div className="category-card" onClick={() => showCategories(category)} key={category.id}>
-            <img style={{display : 'block'}} src={category.url} alt={category.description} />
+            <h2>{category.description}</h2>
+            <img style={{display : 'block'}} src={category.url} />
             <h3>{category.posts}</h3>
             </div>
         ))}
