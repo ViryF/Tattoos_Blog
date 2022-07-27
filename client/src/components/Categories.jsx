@@ -5,7 +5,7 @@ const Categories = (props) => {
   let navigate = useNavigate()
 
   const showCategories = (category) => {
-    navigate(`${category._id}`)                   
+    navigate(`${category._id}/posts`)                   
   }
 
 
