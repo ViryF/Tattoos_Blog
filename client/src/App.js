@@ -48,5 +48,3 @@ function App() {
 }
 
 export default App;
-
-{/* <Route path="/categories/:id/form" element={ <Form  /> } /> */}

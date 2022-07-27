@@ -15,8 +15,6 @@ app.use(express.json())
 app.use(logger('dev'))
 app.use(express.urlencoded({ extended: false }))
 
-// app.use('/api', routes)
-
 app.get('/categories', categoryController.getAllCategories)
 app.get('/categories/:id/posts', postController.getPostsByCat)
 app.get('/categories/:id', categoryController.getCategoryById)

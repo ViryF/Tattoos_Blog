@@ -49,6 +49,5 @@ module.exports = {
   createPost,
   updatePost,
   deletePost,
-  // getAllPosts,
   getPostsByCat
 }
