@@ -24,7 +24,7 @@ const Posts = (props) => {
     getCategoryById()    
   }
   return (
-    <div className="category-grid">
+    <div className="post-background">
       <Link to={`/categories/${id}/form`} > <button>Add Post</button> </Link>
       {
         props.posts?.map((post, index) =>(
