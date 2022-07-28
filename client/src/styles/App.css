@@ -8,9 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #2C3840;
-}
-
+ }
 /* header{
   background-color: #ff5722;
 } */
@@ -141,3 +139,11 @@ nav.borderXwidth a {
 -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
 box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
 }
+main {
+  height: 93vh;
+  background: #140204;
+  background: -moz-linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
+  background: -webkit-linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
+  background: linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
+  }
+
