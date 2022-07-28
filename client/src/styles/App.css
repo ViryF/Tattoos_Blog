@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: gray;
+  background-color: #2C3840;
 }
 
 /* header{
@@ -22,7 +22,7 @@ body {
   width: 100vw;
   /* -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); */
-  background: #ff5722;
+  background: #F0F8FF;
   min-height: 7vh;
   justify-content: space-around;
   /* padding: 1em;
@@ -87,7 +87,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: purple;
+  background-color: #521326;
   border: 2rem;
   border-width: 5px white;
   border-style: double;
@@ -135,4 +135,9 @@ nav.borderXwidth a:hover:before, nav.borderXwidth a:hover:after
 {
     opacity: 1;
     width: 100%;
+}
+
+nav.borderXwidth a {
+-webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
 }
