@@ -8,7 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import EditPost from './components/EditPost';
-// import './styles/App.css';
+import './styles/App.css';
 
 const BASE_URL = 'http://localhost:3001'
 
