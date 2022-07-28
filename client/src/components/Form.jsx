@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:3001'
 
 const Form = (props) => {
 
@@ -26,7 +25,7 @@ const Form = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await axios.post(`${BASE_URL}/categories`, postValues)
+    let res = await axios.post(`/categories`, postValues)
     navigate(`/categories/${id}/posts`)
   }
 

@@ -1,4 +1,3 @@
-// import { useParams } from "react-router-dom"; 
 import Form from './components/Form';
 import Posts from './components/Posts';
 import Categories from './components/Categories'
@@ -10,7 +9,6 @@ import { useState, useEffect } from 'react';
 import EditPost from './components/EditPost';
 import './styles/App.css';
 
-const BASE_URL = 'http://localhost:3001'
 
 function App() {
   
@@ -21,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const getCategories = async () => {
-      const category = await axios.get(`${BASE_URL}/categories`)
+      const category = await axios.get(`/categories`)
       setCategories(category.data)
     }
     getCategories()

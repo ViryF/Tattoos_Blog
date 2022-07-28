@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom"; 
 
-const BASE_URL = 'http://localhost:3001'
 
 
 
@@ -12,7 +11,7 @@ const Posts = (props) => {
 
   
   const getCategoryById = async () => {
-    let posts = await axios.get(`${BASE_URL}/categories/${id}/posts`)
+    let posts = await axios.get(`/categories/${id}/posts`)
     props.setPosts(posts.data)
     console.log(posts.data)
   }
@@ -21,7 +20,7 @@ const Posts = (props) => {
   }, [])
 
   const deletePost = async (id) => {
-    let post = await axios.delete(`${BASE_URL}/categories/${id}/posts/${id}`)
+    let post = await axios.delete(`/categories/${id}/posts/${id}`)
     getCategoryById()    
   }
   return (
