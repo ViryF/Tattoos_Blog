@@ -92,3 +92,12 @@ main {
 .post-background {
   padding-bottom: 10px;
 }
+
+#editPost {
+  color: #F0F8FF;
+}
+
+.addPost {
+  color: #F0F8FF;
+}
+

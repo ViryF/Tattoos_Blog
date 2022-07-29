@@ -34,7 +34,7 @@ const EditPost = (props) => {
 
 
   return (
-    <div>
+    <div id="editPost">
       <h1>Edit your own post now! {props.posts[index].nickname}</h1>
       <h4>Please enter your info below...</h4>
       <form onSubmit={handleSubmit}>

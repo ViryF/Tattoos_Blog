@@ -32,7 +32,7 @@ const Form = (props) => {
 
 
   return (
-    <div>
+    <div className="addPost">
       <h1>Create your own post now!</h1>
       <h4>Please enter your info below...</h4>
       <form onSubmit={handleSubmit}>
