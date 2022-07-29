@@ -136,6 +136,5 @@ main {
   background: -moz-linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
   background: -webkit-linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
   background: linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
-  overflow-y: auto;
-  }
+}
 
