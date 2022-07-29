@@ -25,7 +25,7 @@ const Form = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await axios.post(`/categories`, postValues)
+    await axios.post(`/categories`, postValues)
     navigate(`/categories/${id}/posts`)
   }
 

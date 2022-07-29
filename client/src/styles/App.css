@@ -42,6 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  color: #F0F8FF;
 }
 
 nav.borderXwidth a:before, nav.borderXwidth a:after
@@ -51,7 +52,7 @@ nav.borderXwidth a:before, nav.borderXwidth a:after
   width: 0%;
   height: 2px;
   content: '';
-  background: #FFF;
+  background: rgb(255, 255, 255);
   transition: all 0.3s;
 }
 
@@ -79,11 +80,16 @@ nav.borderXwidth a {
 }
 main {
   height: 100vh;
-  background-attachment:scroll;
-  bottom: 0;
+  /* background-attachment:fixed; */
+  /* bottom: 0; */
   background: #140204;
   background: -moz-linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
   background: -webkit-linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
   background: linear-gradient(45deg, #140204 0%, #3B060D 50%, #949DA1 100%);
+}
+
+.postImg {
+  max-width: 300px;
+  max-height: 300px;
 }
 

@@ -20,7 +20,7 @@ const Posts = (props) => {
   }, [])
 
   const deletePost = async (id) => {
-    let post = await axios.delete(`/categories/${id}/posts/${id}`)
+    await axios.delete(`/categories/${id}/posts/${id}`)
     getCategoryById()    
   }
   return (
@@ -31,7 +31,7 @@ const Posts = (props) => {
           <div className="post-card"  key={post.id}>
             <h2>{post.nickname}</h2>
             <h3>{post.description}</h3>
-            <img style={{display : 'block'}} src={post.url} alt='' />
+            <img className='postImg' style={{display : 'block'}} src={post.url} alt='' />
             <Link to={`/categories/${id}/posts/${post._id}/${index}`}> <button>Edit Post</button> </Link>
             <button onClick={()=>deletePost(post._id)}>Delete Post</button>
             </div>

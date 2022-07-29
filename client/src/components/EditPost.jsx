@@ -26,7 +26,7 @@ const EditPost = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await axios.put(`/categories/${catId}/posts/${postId}`, formState)
+    await axios.put(`/categories/${catId}/posts/${postId}`, formState)
     setFormState(initialState)
     navigate(`/categories/${catId}/posts`)
   }

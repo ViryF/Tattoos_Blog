@@ -4,7 +4,7 @@
 ## [GitHub](https://github.com/ViryF) | [LinkedIn](https://www.linkedin.com/in/viridianaflores)
 ***
 ## ***Description***
-## This is a blog about tattoos. Anyone can view and create posts about tattoos that they like. There ared a total of 6 categories of tattoo types: Languages, Mandala, Tribal, Botanical, Animals and Realism. Within each one of these categories, any user can view all the posts that have been created in relation to that castegory along with any comment or description that was used for each post and the nickname of the user who created it. The users are able to add a new post to any of the selected categories anytime they want. The user can also go ahead and edit or delete a post from any of the categories as well. 
+## This is a blog about tattoos. Anyone can view and create posts about tattoos that they like. There are a total of 6 categories of tattoo types: Languages, Mandala, Tribal, Botanical, Animals and Realism. Within each one of these categories, any user can view all the posts that have been created in relation to that castegory along with any comment or description that was used for each post and the nickname of the user who created it. The users are able to add a new post to any of the selected categories anytime they want. The user can also go ahead and edit or delete a post from any of the categories as well. 
 ***
 ## ***Technologies Used***
 * HTML
@@ -12,6 +12,7 @@
 * CSS
 * React
 * MongoDB / Atlas
+* Heroku
 ***
 ## ***Screenshots*** 
 ### **Single Post**
