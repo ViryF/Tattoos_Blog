@@ -27,6 +27,13 @@ body {
   justify-content: center;
 }
 
+.post-background {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .category-card, .post-card {
   margin: 4vh;
   color: #F0F8FF;
